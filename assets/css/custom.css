@@ -1,0 +1,12 @@
+
+.dataTables_length select{
+	width: auto !important;
+}
+
+table.dataTable.no-footer{
+	border-bottom: 1px solid #ddd;
+}
+
+table.dataTable thead th, table.dataTable thead td{
+	border-bottom: none;
+}

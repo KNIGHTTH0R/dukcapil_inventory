@@ -1,0 +1,1 @@
+<div id="footer"> &copy; Copyright 2012 <span class="tip"><a  href="#" title="Admin" >Baznas Application Ver.1.0</a> </span> </div>

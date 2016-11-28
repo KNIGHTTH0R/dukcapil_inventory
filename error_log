@@ -1,0 +1,5 @@
+[12-Sep-2016 18:55:35 Asia/Jakarta] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/k3481352/public_html/baznas/application/models/Base_model.php on line 11
+[12-Sep-2016 20:25:25 Asia/Jakarta] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/k3481352/public_html/baznas/application/models/Base_model.php on line 11
+[12-Sep-2016 20:25:28 Asia/Jakarta] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/k3481352/public_html/baznas/application/models/Base_model.php on line 11
+[12-Sep-2016 20:25:36 Asia/Jakarta] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/k3481352/public_html/baznas/application/models/Base_model.php on line 11
+[05-Oct-2016 12:54:51 Asia/Jakarta] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/k3481352/public_html/baznas/application/models/Base_model.php on line 11
