@@ -77,9 +77,9 @@ $PDO_conn = TRUE;
 
 $db['default'] = array(
 	// 'dsn'	=> 'mysql:dbname=k3481352_baznas_pro;host=127.0.0.1',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '10.241.2.247',
+	'username' => 'ServerWin',
+	'password' => 'ServerWin',
 	'database' => 'db_inventory',
 	'dbdriver' => 'mysql',
 	'dbprefix' => '',
