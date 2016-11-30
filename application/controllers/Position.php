@@ -5,10 +5,10 @@ class Position extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		
 		$this->load->model('position_model');
 	}
-
-	//USER
+	
 	public function index(){
 		$data = array();
 		
@@ -22,12 +22,12 @@ class Position extends MY_Controller {
 	}
 	
 	public function edit($id){
-		$data = array();
+		$data 	= array();
+		$id 	= intval($id);
 		
-		$id = intval($id);
-		$data['user'] = $this->user_model->getEdit($id);
+		$data['position'] 	= $this->position_model->getEdit($id);
 		
-		$this->twig->display('user/add.edit.user.tpl', $data);
+		$this->twig->display('position/add.edit.position.tpl', $data);
 	}
 	
 	//REQUEST
@@ -42,29 +42,35 @@ class Position extends MY_Controller {
 		$response = array();
 		
 		$post = array(
-			'user_id' => filter_var($this->input->post('user_id'), FILTER_SANITIZE_NUMBER_INT)
+			'position_id' => filter_var($this->input->post('position_id'), FILTER_SANITIZE_NUMBER_INT)
 		);
 		
-		$response = $this->user_model->delete($post);
+		$response = $this->position_model->delete($post);
 		echo json_encode($response);
 	}
 	
+	// function checkCode(){
+	// 	$response = array();
+		
+	// 	$post = array(
+	// 		'category_id' 	=> filter_var($this->input->post('category_id'), FILTER_SANITIZE_NUMBER_INT),
+	// 		'code'			=> filter_var(trim($this->input->post('code')), FILTER_SANITIZE_STRING),
+	// 	);
+		
+	// 	$response = $this->category_model->checkCode($post);
+	// 	echo json_encode($response);
+	// }
+	
 	function save(){
-		$response = array();
-    
-		$post = array(
-			'user_id'       => filter_var($this->input->post('user_id'), FILTER_SANITIZE_NUMBER_INT),
-			'username'		=> filter_var(trim($this->input->post('username')), FILTER_SANITIZE_STRING),
-            'user_fullname' => filter_var(trim($this->input->post('user_fullname')), FILTER_SANITIZE_STRING),
-            'user_email'    => filter_var(trim($this->input->post('user_email')), FILTER_SANITIZE_STRING),
-            'user_phone'    => filter_var(trim($this->input->post('user_phone')), FILTER_SANITIZE_STRING),
-			'position'    	=> filter_var(trim($this->input->post('position')), FILTER_SANITIZE_STRING),
-            'description'   => filter_var(trim($this->input->post('description')), FILTER_SANITIZE_STRING),
-            'user_password' => filter_var(trim($this->input->post('user_password')), FILTER_SANITIZE_STRING),
-			'status'		=> filter_var($this->input->post('status'), FILTER_SANITIZE_STRING)
+		$response 	= array();
+    	
+		$post 		= array(
+			'position_id'   => filter_var($this->input->post('position_id'), FILTER_SANITIZE_NUMBER_INT),
+			'position_name'	=> filter_var(trim($this->input->post('position_name')), FILTER_SANITIZE_STRING),
+            'position_desc' => filter_var(trim($this->input->post('position_desc')), FILTER_SANITIZE_STRING)
 		);
-			
-		$response = $this->user_model->save($post);
+		
+		$response 	= $this->position_model->save($post);
 		echo json_encode($response);
 	}
 }

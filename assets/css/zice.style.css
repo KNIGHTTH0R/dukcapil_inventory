@@ -1979,11 +1979,17 @@ label.iPhoneCheckLabelOff span {
 #content .inner .logo {
 	float: left;
 	padding: 45px 0 0 0;
-	background-image: url(../images/logo/logo_admin.png);
+	/*background-image: url(../images/logo/logo_admin.png);*/
 	width: 191px;
 	height: 44px;
 	background-repeat: no-repeat;
 	background-position: center bottom;
+}
+.logo:before {
+   content: "Inventory Application";
+   font-weight: bold;
+   font-size: 150%;
+   color: #29b9b4;
 }
 /*
 ------------------------------------------------------------
